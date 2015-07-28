@@ -1,13 +1,19 @@
-<div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
+<header id="main_header" class="row">
+	<div class="col-sm-4" id="logoHolder"><a href="@Url.Action("index", "home")"><img src="@Url.Content("~/Content/images/logo.png")" alt="Simon Baynes: Web Development"/></a></div>
+	<nav id="main_nav" class="col-sm-12 col-md-8">
+		<div class="hidden-xs">
+			@{ Html.RenderPartial("Navigation/_MainNav");}
+		</div>
+		<div class="visible-xs">
+			@{ Html.RenderPartial("Navigation/_DropDownNav");}
+		</div>
+	</nav>
+</header>
+
+<nav id="main_nav" class="com-sm-12 col-md-8">
+    <ul id="inline_nav">
         {{#foreach navigation}}
             <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
         {{/foreach}}
     </ul>
-    <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
-</div>
-<span class="nav-cover"></span>
+</nav>
