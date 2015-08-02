@@ -1,19 +1,28 @@
 <header id="main_header" class="row">
-	<div class="col-sm-4" id="logoHolder"><a href="@Url.Action("index", "home")"><img src="@Url.Content("~/Content/images/logo.png")" alt="Simon Baynes: Web Development"/></a></div>
+	<div class="col-sm-4" id="logoHolder"><a href="/"><img src="{{asset "images/logo.png"}}" alt="Simon Baynes: Web Development"/></a></div>
 	<nav id="main_nav" class="col-sm-12 col-md-8">
 		<div class="hidden-xs">
-			@{ Html.RenderPartial("Navigation/_MainNav");}
+			<ul id="inline_nav">
+				<li><a href="/">Home <i class="icon-home"></i></a></li>
+				<li><a href="/about">About <i class="icon-info"></i></a></li>
+				<li><a href="/articles">Articles <i class="icon-pencil"></i></a></li>
+				<li><a href="/contact">Contact <i class="icon-envelope"></i></a></li>
+			</ul>
 		</div>
 		<div class="visible-xs">
-			@{ Html.RenderPartial("Navigation/_DropDownNav");}
+			<ul>
+				<li class="dropdown">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						MENU <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="/">Home <i class="icon-home"></i></a></li>
+						<li><a href="/about">About <i class="icon-info"></i></a></li>
+						<li><a href="/articles">Articles <i class="icon-pencil"></i></a></li>
+						<li><a href="/contact">Contact <i class="icon-envelope"></i></a></li>
+					</ul>
+				</li>
+			</ul>
 		</div>
 	</nav>
 </header>
-
-<nav id="main_nav" class="com-sm-12 col-md-8">
-    <ul id="inline_nav">
-        {{#foreach navigation}}
-            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
-        {{/foreach}}
-    </ul>
-</nav>
