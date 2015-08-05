@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    {{! Document Settings }}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    {{! Page Meta }}
     <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
-
-    <meta name="HandheldFriendly" content="True" />
+    {{! Page Meta }}
+    <meta name="description" xml:lang="en" content="{{meta_description}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="robots" content="index,follow" />
+    <meta charset="utf-8" />
+    {{! Document Settings }}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
-
+    <link href="https://plus.google.com/115350289144911943375/posts" rel="publisher" />
+    
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}} nav-closed">
+<body class="{{body_class}}">
+    <div id="main_container" class="container">
 
-    {{navigation}}
-
-    <div class="site-wrapper">
-
+        {{navigation}}
+    
         {{! Everything else gets inserted here }}
         {{{body}}}
-
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer>
-
+    
+        <footer class="row">
+    		<div id="copywrite" class="col-xs-10 col-sm-10">&copy; Copyright Simon Baynes 2002 - {{date format="YYYY"}}</div>
+    		<div id="rss" class="col-xs-2 col-sm-2"><a href="{{@blog.url}}/rss/" class="btn btn-warning btn-xs">RSS <i class="icon-rss"></i></a></div>
+    	</footer>
+    
+        {{! Ghost outputs important scripts and data with this tag }}
+        {{ghost_foot}}
     </div>
 
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-
     {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-
+	<script type="text/javascript" src="//use.typekit.net/sga8oqn.js"></script>
+	<script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+	<script type="text/javascript" src="{{asset "js/jquery-1.9.1.min.js"}}"></script>
+	<script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/bigtext.1.2.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/article.js"}}"></script>
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="{{asset "js/html5shiv.js"}}"></script>
+	<![endif]-->
 </body>
 </html>
