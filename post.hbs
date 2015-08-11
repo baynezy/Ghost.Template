@@ -10,9 +10,11 @@
     <header id="article_header">
 		<h1><strong>{{title}}</strong></h1>
 	</header>
-    
     <div class="row">
         <div class="col-sm-9">
+            {{#if image}}
+                <img src="{{image}}" class="img-responsive" />
+            {{/if}}
             {{content}}
             {{#author}}
                 <small>By {{name}}</small>
