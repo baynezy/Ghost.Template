@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
     <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'en-GB', parsetags: 'explicit'}
+    </script>
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -48,6 +51,7 @@
 	<script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/bigtext.1.2.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/article.js"}}"></script>
+    <script type="text/javascript">gapi.plus.go();</script>
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="{{asset "js/html5shiv.js"}}"></script>
 	<![endif]-->
