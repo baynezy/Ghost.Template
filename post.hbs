@@ -19,7 +19,18 @@
             {{#author}}
                 <small>By {{name}}</small>
             {{/author}}
-             <div id="disqus_thread"></div>
+            <div id="sharing">
+                <section>
+                    <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+                </section>
+                <section>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="baynezy">Tweet</a>
+                </section>
+                <section class="facebook">
+                    <div class="fb-share-button" data-href="{{url}}" data-layout="button_count"></div>
+                </section>
+            </div>
+            <div id="disqus_thread"></div>
             <script type="text/javascript">
                 /* * * CONFIGURATION VARIABLES * * */
                 var disqus_shortname = 'simonbaynes';

@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
     <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'en-GB', parsetags: 'explicit'}
+    </script>
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
@@ -48,6 +51,16 @@
 	<script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/bigtext.1.2.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/article.js"}}"></script>
+    <script type="text/javascript">gapi.plus.go();</script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4&appId=1475491626105649";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="{{asset "js/html5shiv.js"}}"></script>
 	<![endif]-->

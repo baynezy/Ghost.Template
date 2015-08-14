@@ -190,3 +190,15 @@ blockquote cite {
 img.typekit-badge {
 	visibility: hidden !important;
 }
+
+/* sharing */
+#sharing section {
+	overflow: hidden;
+	width: 90px;
+	float: left;
+}
+
+.facebook {
+	position: relative;
+	top: -5px;
+}
