@@ -18,8 +18,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
-    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
     <script src="https://apis.google.com/js/platform.js" async defer>
       {lang: 'en-GB', parsetags: 'explicit'}
     </script>
@@ -45,13 +43,15 @@
     </div>
 
     {{! The main JavaScript file for Casper }}
-	<script type="text/javascript" src="//use.typekit.net/sga8oqn.js"></script>
-	<script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
-	<script type="text/javascript" src="{{asset "js/jquery-1.9.1.min.js"}}"></script>
-	<script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/bigtext.1.2.js"}}"></script>
-    <script type="text/javascript" src="{{asset "js/article.js"}}"></script>
-    <script type="text/javascript">gapi.plus.go();</script>
+    <script async type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+    <script async type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script async type="text/javascript" src="//use.typekit.net/sga8oqn.js"></script>
+	<script async type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+	<script async type="text/javascript" src="{{asset "js/jquery-1.9.1.min.js"}}"></script>
+	<script async type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
+    <script async type="text/javascript" src="{{asset "js/bigtext.1.2.js"}}"></script>
+    <script async type="text/javascript" src="{{asset "js/article.js"}}"></script>
+    <script async type="text/javascript">gapi.plus.go();</script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
