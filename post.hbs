@@ -49,7 +49,12 @@
             <div id="meta_data">
                 <h4>Meta Data</h4>
                 <p>Posted on: <time datetime="{{date format='YYYY-MM-DD HH:mm'}}" pubdate>{{date format='DD MMM YYYY HH:mm'}}</time></p>
-                <p>{{tags prefix="Tagged with: "}}</p>
+                Tagged with:
+                <ul class="post-tags">
+                    {{#foreach tags}}
+                        <li><a href="{{url}}" title="{{name}}">{{name}}</a></li>
+                    {{/foreach}}
+                </ul>
             </div>
         </aside>
     </div>
