@@ -108,16 +108,6 @@ blockquote cite {
 	padding-top: 20px;
 }
 
-#article_list article aside ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-#article_list article aside ul li {
-	display: inline;
-}
-
 #article_list article.alt {
 	background-color: #1D1D1B;
 	color: #AEB8C0;
@@ -201,4 +191,31 @@ img.typekit-badge {
 .facebook {
 	position: relative;
 	top: -5px;
+}
+
+ul.post-tags {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.post-tags li {
+	display: block;
+	float: left;
+	padding: 4px;
+	margin: 5px 5px 0 0;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border:1px solid #428bca;
+	background-color:#005580;
+}
+
+.post-tags a {
+	color: #FFFFFF;
+}
+
+.post-tags a:hover {
+	color: #AAAAAA;
+	text-decoration: none;
 }
