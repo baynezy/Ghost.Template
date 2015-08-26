@@ -43,24 +43,15 @@
     </div>
 
     {{! The main JavaScript file for Casper }}
-    <script async type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
-    <script async type="text/javascript">hljs.initHighlightingOnLoad();</script>
-	<script async type="text/javascript" src="//use.typekit.net/sga8oqn.js"></script>
-	<script async type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
-	<script async type="text/javascript" src="{{asset "js/jquery-1.9.1.min.js"}}"></script>
-	<script async type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
-    <script async type="text/javascript" src="{{asset "js/bigtext.1.2.js"}}"></script>
-    <script async type="text/javascript" src="{{asset "js/article.js"}}"></script>
-    <script async type="text/javascript">gapi.plus.go();</script>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+	<script defer type="text/javascript" src="//use.typekit.net/sga8oqn.js"></script>
+	<script defer type="text/javascript" src="{{asset "js/jquery-1.9.1.min.js"}}"></script>
+	<script defer type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
+    <script defer type="text/javascript" src="{{asset "js/bigtext.1.2.js"}}"></script>
+    <script defer type="text/javascript" src="{{asset "js/article.js"}}"></script>
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4&appId=1475491626105649";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    <script defer type="text/javascript" src="{{asset "js/social.js"}}"></script>
+    <script defer type="text/javascript" src="{{asset "js/decoration.js"}}"></script>
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="{{asset "js/html5shiv.js"}}"></script>
 	<![endif]-->
