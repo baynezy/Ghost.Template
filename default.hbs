@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {{!-- Document Settings --}}
     <title>{{meta_title}}</title>
-    {{! Page Meta }}
+    {{!-- Page Meta --}}
     <meta name="description" xml:lang="en" content="{{meta_description}}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index,follow" />
     <meta charset="utf-8" />
-    {{! Document Settings }}
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    {{!-- Mobile Meta --}}
     <meta name="HandheldFriendly" content="True" />
     <link rel="shortcut icon" href="{{asset "images/favicon.ico"}}">
     <link href="https://plus.google.com/115350289144911943375/posts" rel="publisher" />
@@ -28,24 +30,27 @@
 <body class="{{body_class}}">
     <div id="main_container" class="container">
 
+    {{!-- The blog navigation links --}}
         {{navigation}}
     
-        {{! Everything else gets inserted here }}
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
     
-        <footer class="row">
+        {{!-- The tiny footer at the very bottom --}}
+	<footer class="row">
     		<div id="copywrite" class="col-xs-10 col-sm-10">&copy; Copyright Simon Baynes 2002 - {{date format="YYYY"}}</div>
     		<div id="rss" class="col-xs-2 col-sm-2"><a href="{{@blog.url}}/rss/" class="btn btn-warning btn-xs">RSS <i class="icon-rss"></i></a></div>
     	</footer>
     
-        {{! Ghost outputs important scripts and data with this tag }}
+        {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+        <script defer type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        {{!-- Ghost outputs important scripts and data with this tag --}}
         {{ghost_foot}}
     </div>
 
     {{! The main JavaScript file for Casper }}
     <script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
 	<script defer type="text/javascript" src="//use.typekit.net/sga8oqn.js"></script>
-	<script defer type="text/javascript" src="{{asset "js/jquery-1.9.1.min.js"}}"></script>
 	<script defer type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
     <script defer type="text/javascript" src="{{asset "js/bigtext.1.2.js"}}"></script>
     <script defer type="text/javascript" src="{{asset "js/article.js"}}"></script>

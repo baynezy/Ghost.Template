@@ -1,6 +1,7 @@
 {{!< default}}
-{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
+{{!-- The big featured header --}}
 <div class="row">
 	<section class="col-xs-12 col-sm-6" id="left_tile">
 		<h1>I am a Technologist &amp; Architect</h1>
@@ -16,8 +17,9 @@
 </div>
 <hr/>
 <div class="row">
+	{{!-- The main content area on the homepage --}}
 	<section class="col-sm-12">
-		{{! The tag below includes the post loop - partials/loop.hbs }}
+		{{!-- The tag below includes the post loop - partials/loop.hbs --}}
         {{> "loop"}}
 	</section>
 </div>
